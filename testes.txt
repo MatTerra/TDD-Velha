@@ -1,0 +1,3 @@
+Testes:
+1. Teste campo vazio retorna -1 -> Testa o retorno do caso mais básico do jogo
+2.

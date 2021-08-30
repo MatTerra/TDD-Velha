@@ -8,11 +8,10 @@
 
 /**
  * @brief verifica situacao do jogo da velha
- * @author Programador
- * @param  velha descreve o parametro
+ * @author Mateus Berardo de Souza Terra
+ * @param  velha jogo a ser analisado
  *
- *  Descrever o que a funcao faz
  */
 int VerificaVelha(int velha[3][3]) {
-  return 0; /*!< retorna zero para teste */
+  return -1;
 }
