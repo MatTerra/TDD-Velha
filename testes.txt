@@ -31,3 +31,5 @@ Testes:
     coluna.
 14. Testa primeria coluna toda igual 2 retorna 2 -> Generaliza a detecção de
     coluna em relação ao jogador
+15. Testa coluna toda igual retorna jogador -> Generaliza a detecção de coluna
+    em relação à coluna
