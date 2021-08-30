@@ -14,6 +14,8 @@ bool XComecou(const int velha[3][3]);
 
 bool JogadorRepetiu(const int velha[3][3]);
 
+bool ColunaETodaIgual(const int velha[3][3], int coluna);
+
 /**
  * @brief Verifica situacao do jogo da velha
  * @author Mateus Berardo de Souza Terra
@@ -28,10 +30,10 @@ int VerificaVelha(int velha[3][3]) {
         if (EstaMarcado(velha, linha)
                 && LinhaETodaIgual(velha, linha))
             return velha[linha][0];
+
     for (int coluna = 0; coluna < 3; coluna++)
         if (EstaMarcado(velha, 0, coluna)
-                && velha[0][coluna] == velha[1][coluna]
-                && velha[1][coluna] == velha[2][coluna])
+                && ColunaETodaIgual(velha, coluna))
             return velha[0][coluna];
 
     return -1;
@@ -45,13 +47,18 @@ bool JogadorRepetiu(const int velha[3][3]) {
     return ContaMarcacao(velha, 1) - ContaMarcacao(velha, 2) > 1;
 }
 
-bool LinhaETodaIgual(const int velha[3][3], int linha) {
-    return velha[linha][0] == velha[linha][1]
-        && velha[linha][1] == velha[linha][2];
-}
-
 bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
     return velha[linha][coluna] > 0;
+}
+
+bool LinhaETodaIgual(const int velha[3][3], int linha) {
+    return velha[linha][0] == velha[linha][1]
+           && velha[linha][1] == velha[linha][2];
+}
+
+bool ColunaETodaIgual(const int velha[3][3], int coluna) {
+    return velha[0][coluna] == velha[1][coluna]
+           && velha[1][coluna] == velha[2][coluna];
 }
 
 int ContaMarcacao(const int velha[3][3], int jogador) {
