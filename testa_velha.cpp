@@ -27,7 +27,7 @@ TEST_CASE("Testa primeira linha toda 1 deve retornar 1", "[single-file]") {
             {2, 0, 0}
     };
 
-    REQUIRE(VerificaVelha(teste) == -1);
+    REQUIRE(VerificaVelha(teste) == 1);
 }
 
 
