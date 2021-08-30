@@ -22,6 +22,9 @@ int VerificaVelha(int velha[3][3]) {
     if (!XComecou(velha))
         return -2;
 
+    if (ContaMarcacao(velha, 1) - ContaMarcacao(velha, 2) > 1)
+        return -2;
+
     for (int linha = 0; linha < 3; linha++)
         if (EstaMarcado(velha, linha)
                 && LinhaETodaIgual(velha, linha))
@@ -30,7 +33,7 @@ int VerificaVelha(int velha[3][3]) {
 }
 
 bool XComecou(const int velha[3][3]) {
-    return ContaMarcacao(velha, 1) > ContaMarcacao(velha, 2);
+    return ContaMarcacao(velha, 1) >= ContaMarcacao(velha, 2);
 }
 
 bool LinhaETodaIgual(const int velha[3][3], int linha) {
