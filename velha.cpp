@@ -36,11 +36,9 @@ bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
 int ContaMarcacao(const int velha[3][3], int jogador) {
     if (jogador < 1 || jogador > 2 )
         return -1;
-    for (int coluna = 0; coluna < 3; coluna ++)
-        if (velha[0][coluna] == jogador)
-            return 1;
-    for (int coluna = 0; coluna < 3; coluna ++)
-        if (velha[1][coluna] == jogador)
-            return 1;
+    for (int linha = 0; linha < 3; linha++)
+        for (int coluna = 0; coluna < 3; coluna ++)
+            if (velha[linha][coluna] == jogador)
+                return 1;
     return 0;
 }
