@@ -39,5 +39,8 @@ int ContaMarcacao(const int velha[3][3], int jogador) {
     for (int coluna = 0; coluna < 3; coluna ++)
         if (velha[0][coluna] == jogador)
             return 1;
+    for (int coluna = 0; coluna < 3; coluna ++)
+        if (velha[1][coluna] == jogador)
+            return 1;
     return 0;
 }
