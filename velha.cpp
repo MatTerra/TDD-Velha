@@ -28,11 +28,11 @@ int VerificaVelha(int velha[3][3]) {
         if (EstaMarcado(velha, linha)
                 && LinhaETodaIgual(velha, linha))
             return velha[linha][0];
-
-    if (EstaMarcado(velha, 0, 0)
-            && velha[0][0] == velha[1][0]
-            && velha[1][0] == velha[2][0])
-        return velha[0][0];
+    for (int coluna = 0; coluna < 3; coluna++)
+        if (EstaMarcado(velha, 0, coluna)
+                && velha[0][coluna] == velha[1][coluna]
+                && velha[1][coluna] == velha[2][coluna])
+            return velha[0][coluna];
 
     return -1;
 }
