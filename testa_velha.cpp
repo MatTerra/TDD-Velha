@@ -85,6 +85,19 @@ TEST_CASE("Testa contagem de jogador retorna 0 se campo vazio",
     REQUIRE(ContaMarcacao(teste, 2) == 0);
 }
 
+TEST_CASE("Testa contagem de jogador retorna 1 se uma marcação",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {1, 0, 0},
+            {0, 0, 0},
+            {0, 0, 0}
+    };
+
+    REQUIRE(ContaMarcacao(teste1, 1) == 1);
+    REQUIRE(ContaMarcacao(teste1, 2) == 0);
+}
+
+
 // TEST_CASE("Testa velha", "[single-file]" ) {
 //   int teste1[3][3]= {
 //     { 2, 0, 1 },

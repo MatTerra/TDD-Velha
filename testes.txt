@@ -15,3 +15,6 @@ Testes:
     Esse teste começa pelo erro mais simples
 7. Testa contagem retorna 0 se campo vazio -> Caso mais simples com parâmetros
     válidos. Inicia os testes válidos.
+8. Teste contagem 1 marcacao retorna 1 -> Adicionamos mais um caso de teste
+    válido, dessa vez forçando a verificação do campo. Cada campo será
+    adicionado individualmente a medida que o código é alterado.
