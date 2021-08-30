@@ -30,6 +30,16 @@ TEST_CASE("Testa primeira linha toda 1 deve retornar 1", "[single-file]") {
     REQUIRE(VerificaVelha(teste) == 1);
 }
 
+TEST_CASE("Testa segunda linha toda 1 deve retornar 1", "[single-file]") {
+    int teste[3][3] = {
+            {0, 2, 0},
+            {1, 1, 1},
+            {2, 0, 0}
+    };
+
+    REQUIRE(VerificaVelha(teste) == 1);
+}
+
 
 // TEST_CASE("Testa velha", "[single-file]" ) {
 //   int teste1[3][3]= {
