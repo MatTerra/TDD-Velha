@@ -32,3 +32,7 @@ bool LinhaETodaIgual(const int velha[3][3], int linha) {
 bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
     return velha[linha][coluna] > 0;
 }
+
+int ContaMarcacao(const int velha[3][3], int jogador) {
+    return 0;
+}
