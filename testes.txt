@@ -1,3 +1,10 @@
 Testes:
 1. Teste campo vazio retorna -1 -> Testa o retorno do caso mais básico do jogo
-2.
+2. Primeira linha toda 1 -> Teste da condição mais básica de sucesso, verifica
+    que a função é capaz de perceber uma vitória na primeira linha
+3. Segunda linha toda 1 -> Teste da vitória por linha na segunda linha, esse
+    teste direciona a solução para a generalização da verificação da linha para
+    várias linhas
+4. Segunda linha toda 2 -> Teste por vitória na segunda linha com o jogador 2.
+    Esse teste direciona a solução para a generalização da verificação do
+    jogador vencedor
