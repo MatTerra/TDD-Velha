@@ -13,9 +13,10 @@
  *
  */
 int VerificaVelha(int velha[3][3]) {
-    if (velha[0][0] == 1
-            && velha[0][0] == velha[0][1]
-            && velha[0][1] == velha[0][2])
-        return 1;
+    for (int i = 0; i < 3; i++)
+        if (velha[i][0] == 1
+                && velha[i][0] == velha[i][1]
+                && velha[i][1] == velha[i][2])
+            return 1;
     return -1;
 }
