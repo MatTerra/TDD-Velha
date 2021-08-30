@@ -38,5 +38,7 @@ int ContaMarcacao(const int velha[3][3], int jogador) {
         return -1;
     if (velha[0][0] == jogador)
         return 1;
+    if (velha[0][1] == jogador)
+        return 1;
     return 0;
 }
