@@ -205,7 +205,7 @@ TEST_CASE("Testa coluna 1 toda 2 retorna 2",
             {2, 0, 1}
     };
 
-    REQUIRE(VerificaVelha(teste1) == 1);
+    REQUIRE(VerificaVelha(teste1) == 2);
 }
 
 // TEST_CASE("Testa velha", "[single-file]" ) {
