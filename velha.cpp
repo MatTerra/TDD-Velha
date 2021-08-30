@@ -36,5 +36,7 @@ bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
 int ContaMarcacao(const int velha[3][3], int jogador) {
     if (jogador < 1 || jogador > 2 )
         return -1;
+    if (velha[0][0] == jogador)
+        return 1;
     return 0;
 }
