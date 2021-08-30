@@ -12,6 +12,8 @@ bool LinhaETodaIgual(const int velha[3][3], int linha);
 
 bool XComecou(const int velha[3][3]);
 
+bool JogadorRepetiu(const int velha[3][3]);
+
 /**
  * @brief Verifica situacao do jogo da velha
  * @author Mateus Berardo de Souza Terra
@@ -19,10 +21,7 @@ bool XComecou(const int velha[3][3]);
  *
  */
 int VerificaVelha(int velha[3][3]) {
-    if (!XComecou(velha))
-        return -2;
-
-    if (ContaMarcacao(velha, 1) - ContaMarcacao(velha, 2) > 1)
+    if (!XComecou(velha) || JogadorRepetiu(velha))
         return -2;
 
     for (int linha = 0; linha < 3; linha++)
@@ -34,6 +33,10 @@ int VerificaVelha(int velha[3][3]) {
 
 bool XComecou(const int velha[3][3]) {
     return ContaMarcacao(velha, 1) >= ContaMarcacao(velha, 2);
+}
+
+bool JogadorRepetiu(const int velha[3][3]) {
+    return ContaMarcacao(velha, 1) - ContaMarcacao(velha, 2) > 1;
 }
 
 bool LinhaETodaIgual(const int velha[3][3], int linha) {
