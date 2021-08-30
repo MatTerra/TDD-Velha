@@ -34,5 +34,5 @@ bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
 }
 
 int ContaMarcacao(const int velha[3][3], int jogador) {
-    return 0;
+    return -1;
 }

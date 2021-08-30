@@ -10,5 +10,8 @@ Testes:
     jogador vencedor
 5. Terceira linha toda 2 -> Teste final para verificação de linha, garante o
     funcionamento da verificação das linhas
-6. Teste contagem de jogador retorna 1 se existe 1 1 -> A função de contagem
+6. Teste contagem retorna -1 se jogador inválido -> A função de contagem
     será uma função auxiliar que conta a quantidade de marcações de um jogador.
+    Esse teste começa pelo erro mais simples
+7. Testa contagem retorna 0 se campo vazio -> Caso mais simples com parâmetros
+    válidos. Inicia os testes válidos.
