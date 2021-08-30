@@ -124,6 +124,18 @@ TEST_CASE("Testa contagem de jogador retorna 1 se uma marcação",
     REQUIRE(ContaMarcacao(teste4, 1) == 0);
 }
 
+TEST_CASE("Testa contagem de jogador retorna 2 se duas marcações",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {1, 0, 2},
+            {0, 0, 0},
+            {0, 0, 2}
+    };
+
+    REQUIRE(ContaMarcacao(teste1, 1) == 1);
+    REQUIRE(ContaMarcacao(teste1, 2) == 2);
+}
+
 
 // TEST_CASE("Testa velha", "[single-file]" ) {
 //   int teste1[3][3]= {

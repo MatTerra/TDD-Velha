@@ -18,3 +18,5 @@ Testes:
 8. Teste contagem 1 marcacao retorna 1 -> Adicionamos mais um caso de teste
     válido, dessa vez forçando a verificação do campo. Cada campo será
     adicionado individualmente a medida que o código é alterado.
+9. Teste contagem 2 marcações retorna 2 -> Esse teste começa a generalização
+    do algoritmo de contagem
