@@ -26,3 +26,6 @@ Testes:
     campo. Esse teste garante que o 1 começou.
 12. Teste diferença entre contagem é <= 1 -> Garante que o x não repetiu se
     começou
+13. Teste primeira coluna toda igual 1 retorna 1 -> Testando a detecção de
+    coluna para o 1 na primeira coluna. Inicia o algoritmo de detecção de
+    coluna.
