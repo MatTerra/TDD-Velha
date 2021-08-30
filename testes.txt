@@ -8,3 +8,5 @@ Testes:
 4. Segunda linha toda 2 -> Teste por vitória na segunda linha com o jogador 2.
     Esse teste direciona a solução para a generalização da verificação do
     jogador vencedor
+5. Terceira linha toda 2 -> Teste final para verificação de linha, garante o
+    funcionamento da verificação das linhas
