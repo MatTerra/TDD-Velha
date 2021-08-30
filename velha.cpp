@@ -46,11 +46,11 @@ int VerificaVelha(int velha[3][3]) {
 }
 
 bool XComecou(const int velha[3][3]) {
-    return ContaMarcacao(velha, 1) >= ContaMarcacao(velha, 2);
+    return ContaMarcacao(velha, X) >= ContaMarcacao(velha, O);
 }
 
 bool JogadorRepetiu(const int velha[3][3]) {
-    return ContaMarcacao(velha, 1) - ContaMarcacao(velha, 2) > 1;
+    return ContaMarcacao(velha, X) - ContaMarcacao(velha, O) > 1;
 }
 
 bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
@@ -68,12 +68,12 @@ bool ColunaETodaIgual(const int velha[3][3], int coluna) {
 }
 
 bool OJogouDepoisDePerder(const int velha[3][3], int ganhador) {
-    return ganhador == 1
-           && ContaMarcacao(velha, 1) == ContaMarcacao(velha, 2);
+    return ganhador == X
+           && ContaMarcacao(velha, X) == ContaMarcacao(velha, O);
 }
 
 int ContaMarcacao(const int velha[3][3], int jogador) {
-    if (jogador < 1 || jogador > 2 )
+    if (jogador < X || jogador > O )
         return -1;
 
     int contagem = 0;
