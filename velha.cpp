@@ -6,6 +6,10 @@
 
 #include "velha.hpp"
 
+bool EstaMarcado(const int velha[3][3], int linha, int coluna = 0);
+
+bool LinhaETodaIgual(const int velha[3][3], int linha);
+
 /**
  * @brief Verifica situacao do jogo da velha
  * @author Mateus Berardo de Souza Terra
@@ -13,10 +17,18 @@
  *
  */
 int VerificaVelha(int velha[3][3]) {
-    for (int i = 0; i < 3; i++)
-        if (velha[i][0] == 1
-                && velha[i][0] == velha[i][1]
-                && velha[i][1] == velha[i][2])
-            return 1;
+    for (int linha = 0; linha < 3; linha++)
+        if (EstaMarcado(velha, linha)
+                && LinhaETodaIgual(velha, linha))
+            return velha[linha][0];
     return -1;
+}
+
+bool LinhaETodaIgual(const int velha[3][3], int linha) {
+    return velha[linha][0] == velha[linha][1]
+        && velha[linha][1] == velha[linha][2];
+}
+
+bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
+    return velha[linha][coluna] > 0;
 }
