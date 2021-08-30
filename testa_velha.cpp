@@ -95,6 +95,15 @@ TEST_CASE("Testa contagem de jogador retorna 1 se uma marcação",
 
     REQUIRE(ContaMarcacao(teste1, 1) == 1);
     REQUIRE(ContaMarcacao(teste1, 2) == 0);
+
+    int teste2[3][3] = {
+            {0, 2, 0},
+            {0, 0, 0},
+            {0, 0, 0}
+    };
+
+    REQUIRE(ContaMarcacao(teste2, 2) == 1);
+    REQUIRE(ContaMarcacao(teste2, 1) == 0);
 }
 
 
