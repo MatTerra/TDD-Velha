@@ -33,3 +33,5 @@ Testes:
     coluna em relação ao jogador
 15. Testa coluna toda igual retorna jogador -> Generaliza a detecção de coluna
     em relação à coluna
+16. Se 1 ganhou, deve ter uma posicao a mais -> Esse teste verifica que não
+    houve nenhuma jogada após a vitória.
