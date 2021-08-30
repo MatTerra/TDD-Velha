@@ -29,3 +29,5 @@ Testes:
 13. Teste primeira coluna toda igual 1 retorna 1 -> Testando a detecção de
     coluna para o 1 na primeira coluna. Inicia o algoritmo de detecção de
     coluna.
+14. Testa primeria coluna toda igual 2 retorna 2 -> Generaliza a detecção de
+    coluna em relação ao jogador

@@ -197,6 +197,17 @@ TEST_CASE("Testa coluna 1 toda 1 retorna 1",
     REQUIRE(VerificaVelha(teste1) == 1);
 }
 
+TEST_CASE("Testa coluna 1 toda 2 retorna 2",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {2, 0, 1},
+            {2, 1, 0},
+            {2, 0, 1}
+    };
+
+    REQUIRE(VerificaVelha(teste1) == 1);
+}
+
 // TEST_CASE("Testa velha", "[single-file]" ) {
 //   int teste1[3][3]= {
 //     { 2, 0, 1 },
