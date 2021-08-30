@@ -7,11 +7,15 @@
 #include "velha.hpp"
 
 /**
- * @brief verifica situacao do jogo da velha
+ * @brief Verifica situacao do jogo da velha
  * @author Mateus Berardo de Souza Terra
- * @param  velha jogo a ser analisado
+ * @param  velha Jogo a ser analisado
  *
  */
 int VerificaVelha(int velha[3][3]) {
-  return -1;
+    if (velha[0][0] == 1
+            && velha[0][0] == velha[0][1]
+            && velha[0][1] == velha[0][2])
+        return 1;
+    return -1;
 }
