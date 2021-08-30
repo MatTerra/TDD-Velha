@@ -148,6 +148,24 @@ TEST_CASE("Testa contagem de jogador retorna 3 se tres marcacoes",
     REQUIRE(ContaMarcacao(teste1, 2) == 3);
 }
 
+TEST_CASE("Testa contagem de jogador retorna 3 se tres marcacoes",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {1, 0, 2},
+            {0, 1, 0},
+            {2, 0, 2}
+    };
+
+    REQUIRE(VerificaVelha(teste1) == -2);
+
+    int teste2[3][3] = {
+            {0, 0, 2},
+            {0, 0, 0},
+            {0, 0, 0}
+    };
+
+    REQUIRE(VerificaVelha(teste2) == -2);
+}
 
 // TEST_CASE("Testa velha", "[single-file]" ) {
 //   int teste1[3][3]= {

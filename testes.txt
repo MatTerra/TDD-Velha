@@ -22,3 +22,5 @@ Testes:
     do algoritmo de contagem
 10. Teste contagem com 3 marcações -> Esse teste ajuda a cobrir casos com somas
     maiores que 2
+11. Teste 2 com mais marcacoes retorna -2 -> Início dos testes de validação do
+    campo. Esse teste garante que o 1 começou.
