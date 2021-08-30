@@ -289,3 +289,14 @@ TEST_CASE("Diagonal secundaria 1 deve retornar 1",
     REQUIRE(VerificaVelha(teste1) == 1);
 }
 
+TEST_CASE("Diagonal secundaria 2 deve retornar 2",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {0, 0, 2},
+            {1, 2, 1},
+            {2, 0, 1}
+    };
+
+    REQUIRE(VerificaVelha(teste1) == 2);
+}
+

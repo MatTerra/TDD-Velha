@@ -18,6 +18,8 @@ bool ColunaETodaIgual(const int velha[3][3], int coluna);
 
 bool OJogouDepoisDePerder(const int velha[3][3], int ganhador);
 
+bool DiagonalPrincipalEIgual(const int velha[3][3]);
+
 /**
  * @brief Verifica situacao do jogo da velha
  * @author Mateus Berardo de Souza Terra
@@ -42,10 +44,14 @@ int VerificaVelha(int velha[3][3]) {
                 && ColunaETodaIgual(velha, coluna))
             ganhador = velha[0][coluna];
 
-    if (EstaMarcado(velha, 0, 0)
-            && velha[0][0] == velha[1][1]
-            && velha[1][1] == velha[2][2])
+    if (EstaMarcado(velha, 1, 1)
+        && DiagonalPrincipalEIgual(velha))
         ganhador = velha[0][0];
+
+    if (velha[0][2] == 1
+            && velha[0][2] == velha[1][1]
+            && velha[1][1] == velha[2][0])
+        ganhador = 1;
 
     if (OJogouDepoisDePerder(velha, ganhador))
         return -2;
@@ -73,6 +79,11 @@ bool LinhaETodaIgual(const int velha[3][3], int linha) {
 bool ColunaETodaIgual(const int velha[3][3], int coluna) {
     return velha[0][coluna] == velha[1][coluna]
            && velha[1][coluna] == velha[2][coluna];
+}
+
+bool DiagonalPrincipalEIgual(const int velha[3][3]) {
+    return velha[0][0] == velha[1][1]
+           && velha[1][1] == velha[2][2];
 }
 
 bool OJogouDepoisDePerder(const int velha[3][3], int ganhador) {
