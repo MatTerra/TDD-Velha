@@ -45,3 +45,4 @@ Testes:
     principal para todos os jogadores
 20. Testa diagonal secundaria 1 -> Verifica a detecção da diagonal secundaria
     para o jogador 1
+21. Testa diagonal secundaria 2 -> Generaliza a detecção da diagonal secundaria

@@ -20,6 +20,10 @@ bool OJogouDepoisDePerder(const int velha[3][3], int ganhador);
 
 bool DiagonalPrincipalEIgual(const int velha[3][3]);
 
+bool DiagonalSecundariaEIgual(const int velha[3][3]);
+
+bool HaJogadasSuficientesParaGanhar(const int velha[3][3]);
+
 /**
  * @brief Verifica situacao do jogo da velha
  * @author Mateus Berardo de Souza Terra
@@ -28,12 +32,12 @@ bool DiagonalPrincipalEIgual(const int velha[3][3]);
  */
 int VerificaVelha(int velha[3][3]) {
     if (!XComecou(velha) || JogadorRepetiu(velha))
-        return -2;
+        return JOGO_INVALIDO;
 
-    if (ContaMarcacao(velha, X) < 3)
-        return -1;
+    if (!HaJogadasSuficientesParaGanhar(velha))
+        return JOGO_INDEFINIDO;
 
-    int ganhador = 0;
+    int ganhador = JOGO_EMPATADO;
     for (int linha = 0; linha < 3; linha++)
         if (EstaMarcado(velha, linha)
                 && LinhaETodaIgual(velha, linha))
@@ -45,16 +49,12 @@ int VerificaVelha(int velha[3][3]) {
             ganhador = velha[0][coluna];
 
     if (EstaMarcado(velha, 1, 1)
-        && DiagonalPrincipalEIgual(velha))
-        ganhador = velha[0][0];
-
-    if (velha[0][2] == 1
-            && velha[0][2] == velha[1][1]
-            && velha[1][1] == velha[2][0])
-        ganhador = 1;
+            && (DiagonalPrincipalEIgual(velha)
+                || DiagonalSecundariaEIgual(velha)))
+        ganhador = velha[1][1];
 
     if (OJogouDepoisDePerder(velha, ganhador))
-        return -2;
+        return JOGO_INVALIDO;
 
     return ganhador;
 }
@@ -65,6 +65,10 @@ bool XComecou(const int velha[3][3]) {
 
 bool JogadorRepetiu(const int velha[3][3]) {
     return ContaMarcacao(velha, X) - ContaMarcacao(velha, O) > 1;
+}
+
+bool HaJogadasSuficientesParaGanhar(const int velha[3][3]) {
+    return ContaMarcacao(velha, X) >= 3;
 }
 
 bool EstaMarcado(const int velha[3][3], int linha, int coluna) {
@@ -84,6 +88,11 @@ bool ColunaETodaIgual(const int velha[3][3], int coluna) {
 bool DiagonalPrincipalEIgual(const int velha[3][3]) {
     return velha[0][0] == velha[1][1]
            && velha[1][1] == velha[2][2];
+}
+
+bool DiagonalSecundariaEIgual(const int velha[3][3]) {
+    return velha[0][2] == velha[1][1]
+           && velha[1][1] == velha[2][0];
 }
 
 bool OJogouDepoisDePerder(const int velha[3][3], int ganhador) {
