@@ -148,7 +148,7 @@ TEST_CASE("Testa contagem de jogador retorna 3 se tres marcacoes",
     REQUIRE(ContaMarcacao(teste1, 2) == 3);
 }
 
-TEST_CASE("Testa contagem de jogador retorna 3 se tres marcacoes",
+TEST_CASE("Testa 1 comeca",
           "[single-file]") {
     int teste1[3][3] = {
             {1, 0, 2},

@@ -17,6 +17,9 @@ bool LinhaETodaIgual(const int velha[3][3], int linha);
  *
  */
 int VerificaVelha(int velha[3][3]) {
+    if (ContaMarcacao(velha, 2) > ContaMarcacao(velha, 1))
+        return -2;
+
     for (int linha = 0; linha < 3; linha++)
         if (EstaMarcado(velha, linha)
                 && LinhaETodaIgual(velha, linha))
