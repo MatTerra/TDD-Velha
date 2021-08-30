@@ -60,7 +60,7 @@ TEST_CASE("Testa terceira linha toda 2 deve retornar 2", "[single-file]") {
     REQUIRE(VerificaVelha(teste) == 2);
 }
 
-TEST_CASE("Testa contagem de jogador retorna -1 se jogador inválido",
+TEST_CASE("Testa contagem de jogador retorna -1 se jogador invalido",
           "[single-file]") {
     int teste[3][3] = {
             {0, 0, 0},
@@ -85,7 +85,7 @@ TEST_CASE("Testa contagem de jogador retorna 0 se campo vazio",
     REQUIRE(ContaMarcacao(teste, 2) == 0);
 }
 
-TEST_CASE("Testa contagem de jogador retorna 1 se uma marcação",
+TEST_CASE("Testa contagem de jogador retorna 1 se uma marcacao",
           "[single-file]") {
     int teste1[3][3] = {
             {1, 0, 0},
@@ -124,7 +124,7 @@ TEST_CASE("Testa contagem de jogador retorna 1 se uma marcação",
     REQUIRE(ContaMarcacao(teste4, 1) == 0);
 }
 
-TEST_CASE("Testa contagem de jogador retorna 2 se duas marcações",
+TEST_CASE("Testa contagem de jogador retorna 2 se duas marcacoes",
           "[single-file]") {
     int teste1[3][3] = {
             {1, 0, 2},
@@ -134,6 +134,18 @@ TEST_CASE("Testa contagem de jogador retorna 2 se duas marcações",
 
     REQUIRE(ContaMarcacao(teste1, 1) == 1);
     REQUIRE(ContaMarcacao(teste1, 2) == 2);
+}
+
+TEST_CASE("Testa contagem de jogador retorna 3 se tres marcacoes",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {1, 0, 2},
+            {0, 1, 0},
+            {2, 0, 2}
+    };
+
+    REQUIRE(ContaMarcacao(teste1, 1) == 2);
+    REQUIRE(ContaMarcacao(teste1, 2) == 3);
 }
 
 

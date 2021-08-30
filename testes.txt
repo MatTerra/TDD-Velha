@@ -20,3 +20,5 @@ Testes:
     adicionado individualmente a medida que o código é alterado.
 9. Teste contagem 2 marcações retorna 2 -> Esse teste começa a generalização
     do algoritmo de contagem
+10. Teste contagem com 3 marcações -> Esse teste ajuda a cobrir casos com somas
+    maiores que 2
