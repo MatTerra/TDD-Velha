@@ -40,3 +40,8 @@ Testes:
     empatado
 18. Testa diagonal principal 1 -> Esse teste verifica se a diagonal principal
     toda 1 retorna a vitoria para 1
+19. Testa diagonal principal 2 -> Esse teste verifica se a diagonal principal
+    toda 2 retorna a vitoria para 2 e generaliza a verificação da diagonal
+    principal para todos os jogadores
+20. Testa diagonal secundaria 1 -> Verifica a detecção da diagonal secundaria
+    para o jogador 1

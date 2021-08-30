@@ -42,6 +42,11 @@ int VerificaVelha(int velha[3][3]) {
                 && ColunaETodaIgual(velha, coluna))
             ganhador = velha[0][coluna];
 
+    if (EstaMarcado(velha, 0, 0)
+            && velha[0][0] == velha[1][1]
+            && velha[1][1] == velha[2][2])
+        ganhador = velha[0][0];
+
     if (OJogouDepoisDePerder(velha, ganhador))
         return -2;
 
