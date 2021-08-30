@@ -256,3 +256,14 @@ TEST_CASE("Se 1 ja jogou pelo menos 3 vezes e ngm ganhou retorna 0",
     REQUIRE(VerificaVelha(teste2) == 0);
 }
 
+TEST_CASE("Diagonal principal 1 deve retornar 1",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {1, 0, 0},
+            {2, 1, 2},
+            {0, 0, 1}
+    };
+
+    REQUIRE(VerificaVelha(teste1) == 1);
+}
+

@@ -28,7 +28,10 @@ int VerificaVelha(int velha[3][3]) {
     if (!XComecou(velha) || JogadorRepetiu(velha))
         return -2;
 
-    int ganhador = -1;
+    if (ContaMarcacao(velha, X) < 3)
+        return -1;
+
+    int ganhador = 0;
     for (int linha = 0; linha < 3; linha++)
         if (EstaMarcado(velha, linha)
                 && LinhaETodaIgual(velha, linha))

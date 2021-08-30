@@ -38,3 +38,5 @@ Testes:
 17. Jogo empatado com mais de 3 jogadas deve retornar 0 -> Este teste verifica
     que assim que há ao menos 3 jogadas o jogo passa de indefinido para
     empatado
+18. Testa diagonal principal 1 -> Esse teste verifica se a diagonal principal
+    toda 1 retorna a vitoria para 1
