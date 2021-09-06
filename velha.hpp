@@ -19,4 +19,5 @@ bool ColunaETodaIgual(const int velha[3][3], int coluna);
 bool OJogouDepoisDePerder(const int velha[3][3], int ganhador);
 bool DiagonalPrincipalEIgual(const int velha[3][3]);
 bool DiagonalSecundariaEIgual(const int velha[3][3]);
+bool PossuiApenasMarcacoesValidas(const int velha[3][3]);
 

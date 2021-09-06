@@ -300,3 +300,22 @@ TEST_CASE("Diagonal secundaria 2 deve retornar 2",
     REQUIRE(VerificaVelha(teste1) == 2);
 }
 
+TEST_CASE("Campo com marcacao invalida retorna JOGO_INVALIDO",
+          "[single-file]") {
+    int teste1[3][3] = {
+            {-1, 0, 2},
+            {1, 2, 1},
+            {2, 0, 1}
+    };
+
+    REQUIRE(VerificaVelha(teste1) == -2);
+
+    int teste2[3][3] = {
+            {3, 0, 2},
+            {1, 2, 1},
+            {2, 0, 1}
+    };
+
+    REQUIRE(VerificaVelha(teste2) == -2);
+}
+

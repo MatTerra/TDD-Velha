@@ -21,7 +21,9 @@
  * X. Caso O tenha ganhado, retorna O.
  */
 int VerificaVelha(int velha[3][3]) {
-    if (!XComecou(velha) || JogadorRepetiu(velha))
+    if (!XComecou(velha)
+            || JogadorRepetiu(velha)
+            || !PossuiApenasMarcacoesValidas(velha))
         return JOGO_INVALIDO;
 
     if (!HaJogadasSuficientesParaGanhar(velha))
@@ -209,4 +211,21 @@ int ContaMarcacao(const int velha[3][3], int jogador) {
                 contagem++;
 
     return contagem;
+}
+
+/**
+ * @brief Verifica se há alguma marcacao invalida
+ * @author Mateus Berardo de Souza Terra
+ * @param velha Jogo a ser analisado
+ *
+ * Analisa um tabuleiro de jogo da velha e
+ * retorna true se todas as marcacoes sao validas.
+ */
+bool PossuiApenasMarcacoesValidas(const int velha[3][3]) {
+    for (int linha = 0; linha < 3; linha++)
+        for (int coluna = 0; coluna < 3; coluna ++)
+            if (velha[linha][coluna] < 0 || velha[linha][coluna] > 2)
+                return false;
+
+    return true;
 }
